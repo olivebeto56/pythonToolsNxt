@@ -73,7 +73,7 @@ def main():
     nSkill = getMemoryData(1)
 
     fillSkillsGlobal()
-    es = getSkills("es")
+    es = getSkills("en")
 
     onlyfiles = [f for f in listdir(
         "files/categories/") if isfile(join("files/categories/", f))]

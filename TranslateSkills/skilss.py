@@ -4,6 +4,7 @@ import sys
 import math
 import threading
 import os
+import constants
 
 
 class Thread(threading.Thread):
@@ -15,7 +16,7 @@ class Thread(threading.Thread):
 def translate(number, list):
 
     translate = boto3.client(service_name='translate',
-                             aws_access_key_id='AKIAJ6CWPJBDDYHVCW6A', aws_secret_access_key='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')
+                             aws_access_key_id=constants.getAwsAccessKey(), aws_secret_access_key=constants.getAwsSecretAccessKey())
 
     count = 0
     with open('files-out/skills-es-'+str(number)+'.csv', 'w') as writeFile:
